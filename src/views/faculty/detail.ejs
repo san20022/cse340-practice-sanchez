@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <%= faculty.name %>
+        </h1>
+        <nav>
+            <a href="/faculty">Back to Faculty Directory</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <p><strong>Department:</strong>
+                <%= faculty.department %>
+            </p>
+            <p><strong>Title:</strong>
+                <%= faculty.title %>
+            </p>
+            <p><strong>Office:</strong>
+                <%= faculty.office %>
+            </p>
+            <p><strong>Phone:</strong>
+                <%= faculty.phone %>
+            </p>
+            <p><strong>Email:</strong>
+                <a href="mailto:<%= faculty.email %>">
+                    <%= faculty.email %>
+                </a>
+            </p>
+        </article>
+    </main>
+</body>
+
+</html>
