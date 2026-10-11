@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            margin-bottom: 25px;
+        }
+
+        nav a {
+            margin-right: 15px;
+        }
+
+        .course {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/faculty">Faculty Directory</a>
+    </nav>
+
+    <p>Browse our available courses.</p>
+
+    <% catalog.forEach((course)=> { %>
+        <section class="course">
+            <h2>
+                <%= course.name %>
+            </h2>
+            <p><strong>Course ID:</strong>
+                <%= course.id %>
+            </p>
+            <p><strong>Department:</strong>
+                <%= course.department %>
+            </p>
+            <a href="/catalog/<%= course.id %>">View Course Details</a>
+        </section>
+        <% }); %>
+</body>
+
+</html>

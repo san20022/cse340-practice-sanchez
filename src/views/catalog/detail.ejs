@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .course {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/catalog">Back to Course Catalog</a>
+        <a href="/faculty">Faculty Directory</a>
+    </nav>
+
+    <section class="course">
+        <p><strong>Course ID:</strong>
+            <%= course.id %>
+        </p>
+        <p><strong>Course Name:</strong>
+            <%= course.name %>
+        </p>
+        <p><strong>Department:</strong>
+            <%= course.department %>
+        </p>
+    </section>
+</body>
+
+</html>
